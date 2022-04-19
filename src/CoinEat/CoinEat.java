@@ -104,6 +104,7 @@ public void crashCheck(){
             coinX = (int) (Math.random() * (501 - playerWidth));
             // 프레임틀 길이 30
             coinY = (int) (Math.random() * (501 - playerHeight - 30)) + 30;
+
         }
 }
 
