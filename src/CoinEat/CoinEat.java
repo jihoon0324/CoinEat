@@ -96,6 +96,17 @@ public class CoinEat extends JFrame {
        if(left && playerX -3>30)playerX-=3;
        if(right && playerX + playerWidth+3 <500)playerX+=3;
    }
+   // player get coin score
+public void crashCheck(){
+        if(playerX+playerHeight >coinX && coinX+ coinWidth >playerX
+        && playerY+playerHeight>coinY && coinY+coinHeight>playerY){
+            score +=100;
+            coinX = (int) (Math.random() * (501 - playerWidth));
+            // 프레임틀 길이 30
+            coinY = (int) (Math.random() * (501 - playerHeight - 30)) + 30;
+        }
+}
+
    // 버퍼링 해결 ( 화면 깜박임 심함)
     public  void paint(Graphics g){
       bufferImage = createImage(500,500);
