@@ -75,6 +75,7 @@ public class CoinEat extends JFrame {
         Init();
         while (true) {
             // 대기시간없이 계속 반복되면 무리가 갈수 있으므로 대기시간을 줌 .
+            
             try {
                 Thread.sleep(20);
             } catch (InterruptedException e) {
